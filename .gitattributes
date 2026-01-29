@@ -1,0 +1,6 @@
+# Normalizar finales de línea
+* text=auto eol=lf
+
+# Scripts Windows
+*.bat text eol=crlf
+*.cmd text eol=crlf

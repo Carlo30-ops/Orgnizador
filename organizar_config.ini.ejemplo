@@ -1,0 +1,17 @@
+[RUTAS]
+# Carpeta de origen: documentos .doc/.docx por organizar (se usa el más reciente)
+source = C:\Users\TU_USUARIO\Documents\TERAPIAS\DOCUMENTOS PARA ARMAR
+
+# Carpeta de destino: estructura AÑO\MM- MES\DD DE MES\PACIENTE
+base_dest = C:\Users\TU_USUARIO\Documents\TERAPIAS\TERAPIAS
+
+# Carpeta de respaldo: ahí se mueve el Word después de cerrar Word
+backup = C:\Users\TU_USUARIO\Documents\TERAPIAS\Respaldo
+
+# Archivo de log
+logfile = C:\Users\TU_USUARIO\Documents\TERAPIAS\organizar_log.txt
+
+# (Opcional) Ruta de Microsoft Word. Por defecto: winword.exe
+# Si Word está en una ruta no estándar, indica la ruta completa, ej.:
+# word_path = C:\Program Files\Microsoft Office\root\Office16\WINWORD.EXE
+word_path = winword.exe

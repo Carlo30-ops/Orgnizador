@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.eggs/
+dist-eggs/
+*.egg
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env/
+
+# PyInstaller
+build/
+dist/
+*.spec.bak
+
+# Configuración local (contiene rutas del usuario)
+organizar_config.ini
+
+# IDE / Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+organizar_log.txt
+
+# Tests / Coverage
+.pytest_cache/
+.coverage
+htmlcov/
