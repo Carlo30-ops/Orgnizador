@@ -52,7 +52,7 @@ class TestFindLatestDocLogic(unittest.TestCase):
     """Tests de la lógica de find_latest_doc (sin importar terapias)."""
 
     def setUp(self):
-        self.temp_dir = tempfile.mkdtemp(dir=os.path.dirname(os.path.abspath(__file__)))
+        self.temp_dir = tempfile.mkdtemp(prefix="terapias_test_", dir=tempfile.gettempdir())
 
     def tearDown(self):
         import shutil

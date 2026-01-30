@@ -11,7 +11,7 @@ echo ========================================
 echo.
 
 :: 1. Verificar Python
-echo [1/4] Verificando Python...
+echo [1/5] Verificando Python...
 python --version >nul 2>&1
 if errorlevel 1 (
     echo ERROR: Python no encontrado. Instala Python desde python.org
@@ -34,7 +34,7 @@ echo PyInstaller instalado correctamente.
 echo.
 
 :: 3. Limpiar build anterior (opcional, evita artefactos obsoletos)
-echo [3/4] Limpiando build anterior...
+echo [3/5] Limpiando build anterior...
 if exist "build" rmdir /s /q "build"
 echo.
 

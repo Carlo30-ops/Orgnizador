@@ -1,0 +1,4 @@
+# Versiones mínimas probadas (Python 3.9–3.12)
+customtkinter>=5.2.0
+packaging
+pywin32>=306

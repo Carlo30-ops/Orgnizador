@@ -1,15 +1,25 @@
 # -*- mode: python ; coding: utf-8 -*-
 import os
+from PyInstaller.utils.hooks import collect_data_files
 
-# Directorio del proyecto (terapias.py, terapias_logic.py)
 project_dir = os.path.dirname(os.path.abspath(SPEC))
+ctk_datas = collect_data_files("customtkinter")
+icon_path = os.path.join(project_dir, "image-removebg-preview.ico")
 
 a = Analysis(
-    ['terapias.py'],
+    ["terapias.py"],
     pathex=[project_dir],
     binaries=[],
-    datas=[],
-    hiddenimports=['terapias_logic'],
+    datas=ctk_datas,
+    hiddenimports=[
+        "terapias_logic",
+        "ui_components",
+        "win32com.client",
+        "pythoncom",
+        "pywintypes",
+        "win32api",
+        "win32con",
+    ],
     hookspath=[],
     hooksconfig={},
     runtime_hooks=[],
@@ -17,6 +27,7 @@ a = Analysis(
     noarchive=False,
     optimize=0,
 )
+
 pyz = PYZ(a.pure)
 
 exe = EXE(
@@ -25,7 +36,7 @@ exe = EXE(
     a.binaries,
     a.datas,
     [],
-    name='terapias',
+    name="terapias",
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
@@ -38,4 +49,5 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
+    icon=icon_path if os.path.isfile(icon_path) else None,
 )
